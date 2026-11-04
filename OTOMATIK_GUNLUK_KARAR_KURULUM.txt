@@ -1,0 +1,20 @@
+LEXGÜNLÜK TAMAMEN ÜCRETSİZ SÜRÜM — KURULUM
+
+Ücretli OpenAI API kullanılmaz. Hiçbir API anahtarı gerekmez.
+
+1. GitHub üzerinde herkese açık (public) LexGunluk isimli bir depo oluşturun.
+2. ZIP içindeki dosyaları, .github klasörü dahil olacak şekilde depo köküne yükleyin.
+3. Settings > Pages > Build and deployment > Deploy from a branch: main / (root), Save.
+4. Actions sekmesinden "Ucretsiz gunluk hukuk makalesi secimi" görevini etkinleştirin.
+5. Actions > Run workflow ile ilk çalıştırmayı deneyin. Günlük görev yaklaşık 08:15 Türkiye saatine planlıdır; GitHub'da gecikme olabilir.
+6. https://KULLANICIADI.github.io/LexGunluk/ adresinde yayınlanır (adres depo ismine göre değişir).
+7. iPhone: Safari > Paylaş > Ana Ekrana Ekle. Windows: Chrome/Edge > uygulama olarak yükle.
+
+DİKKAT:
+- Bu sürüm sadece DergiPark OAI-PMH üzerinden yeni hukuk makalesi bulmayı dener; yeni Yargıtay kararlarını otomatik bulmaz.
+- Kaynak erişimi veya uygun yeni makale yoksa, o gün otomatik kayıt eklenmez; uygulama eski arşivden önerir.
+- Üstveri açıklaması hukuki görüş/karar tahlili değildir; dilekçede kaynak tam metni kontrol edilmelidir.
+- Kaynak erişimi dağıtıcı tarafından engellenebilir; gerçek otomasyon ancak GitHub'da denendikten sonra doğrulanabilir.
+- Public GitHub deposundaki dosyalar ve otomatik yayımlanan içerikler herkese açıktır. Müvekkil/dosya/kişisel veri eklemeyin.
+- Kaydetme/notlar tarayıcıda yerel tutulur, cihazlar arasında otomatik eşitlenmez.
+- Ücretsiz hizmetler kota/politika değişikliklerine tabidir; özel alan adı opsiyonel ve ücretli olabilir.
