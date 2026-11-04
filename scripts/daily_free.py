@@ -76,7 +76,7 @@ def main():
     now=datetime.now(ZoneInfo('Europe/Istanbul'))
     day=now.date().isoformat()
     existing=json.loads(OUT.read_text('utf-8')) if OUT.exists() else []
-    if any(x.get('daily_date')==day for x in existing):print('Bugün zaten yayımlandı');return
+    if any(x.get('daily_date')==day and x.get('kind')=='Makale' for x in existing):print('Bugünkü makale zaten yayımlandı');return
     try: pool=candidates(now.date()-timedelta(days=30))
     except Exception as e:
         print('Kaynak erişilemedi, yeni içerik oluşturulmadı: '+str(e),file=sys.stderr)

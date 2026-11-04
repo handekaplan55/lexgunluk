@@ -1,0 +1,24 @@
+LEXGÜNLÜK — 1 YARGITAY KARARI + 1 HUKUK MAKALESİ / GÜN
+
+VAR OLAN GitHub depoda:
+1. ZIP'i açın. İçindeki dosyaların TAMAMINI depoya kök dizine sürükleyip yükleyin.
+   Klasör yapısı: index.html, gunluk-kararlar.json, gunluk-kararlar.js,
+   scripts/daily_free.py, scripts/daily_yargitay.py, scripts/daily_bulletin.py,
+   .github/workflows/gunluk-karar.yml.
+2. GitHub web yüklemesinde nokta ile başlayan .github klasörü gizlenebilir.
+   Bu durumda GitHub dosya editöründe .github/workflows/gunluk-karar.yml
+   yolunda oluşturun ve ZIP içindeki YAML içeriğini yapıştırın.
+3. Eski workflow dosyası varsa aynı adla YENİSİYLE değiştirin; iki ayrı
+   günlük workflow çalıştırmayın.
+4. Actions > Her gun 1 Yargitay karari ve 1 makale > Run workflow.
+5. Logs'ta kaynak hatalarını kontrol edin, ardından web sitesini açın.
+
+DİKKAT
+* İki otomatik araştırma ücretsiz ve API anahtarsızdır.
+* Yargıtay site iç uç noktaları resmî/garantili bir API değildir. Hız sınırı,
+  erişim kontrolü veya site değişikliği nedeniyle başarısız olabilir.
+* Sistem yalnızca doğrulayabildiği kararı yayımlar. Doğrulayamazsa boş kalır.
+* Dava metinlerini veya kişisel verileri Github'a yüklemeyin.
+* Makale özeti DergiPark açık üstverisinden alınır; otomatik yorum değildir.
+* Yargıtay kararı açma bağlantısı resmî ARAMA ekranıdır, kararın sabit linki değildir.
+* GitHub Pages önbelleği nedeniyle güncellemeler biraz gecikebilir.
