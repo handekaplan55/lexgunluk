@@ -1,0 +1,34 @@
+name: Ucretsiz gunluk hukuk makalesi secimi
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 5 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lexgunluk-daily
+  cancel-in-progress: false
+
+jobs:
+  gunluk-arastirma:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: DergiPark makalelerini arastir
+        run: python scripts/daily_free.py
+
+      - name: Yeni icerikleri yayinla
+        run: |
+          git config user.name 'lexgunluk-bot'
+          git config user.email 'lexgunluk-bot@users.noreply.github.com'
+          git add gunluk-kararlar.json gunluk-kararlar.js
+          if ! git diff --cached --quiet; then
+            git commit -m "LexGunluk gunluk makale"
+            git push
